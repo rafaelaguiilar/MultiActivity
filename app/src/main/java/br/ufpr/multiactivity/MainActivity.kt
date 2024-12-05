@@ -22,6 +22,13 @@ class MainActivity : AppCompatActivity() {
 
     fun goNextActivity(view: View) {
         val intent = Intent(this, DetailActivity::class.java)
+        val user = User (
+            userName = "Alessandro",
+            n1Peso = 2,
+            n1 = 9.2
+        )
+        intent.putExtra("user", user)
+
         startActivity(intent)
     }
 }
